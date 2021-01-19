@@ -1,3 +1,7 @@
+# We have some data that contains a mixture of flower and shrubs in a list.
+# Our customer would like two separate lists, one called "flowers" and one called "shrubs"
+# Write code to populate the two lists with appropriate plants from "data"
+
 data = [
     "Andromeda - Shrub",
     "Bellflower - Flower",
@@ -23,16 +27,21 @@ data = [
 flowers = []
 shrubs = []
 
-# write your code here
 for plant in data:
     if "Flower" in plant:
         flowers.append(plant)
     elif "Shrub" in plant:
         shrubs.append(plant)
 
-for number, plant in enumerate(flowers):
-    print("{0:2}. {1}".format(number + 1, plant))
-print()
-for number, plant in enumerate(shrubs):
-    print("{0:2}. {1}".format(number + 1, plant))
+for number, a in enumerate(flowers):
+    print("{}. {}".format(number + 1, a))
 
+print()
+print("-" * 10)
+print()
+
+for number, b in enumerate(shrubs):
+    print("{}. {}".format(number + 1, b))
+
+# In addition to splitting data into two lists, I wanted each list to be numbered
+# I was able to achieve this using the code on lines 36/37 and 43/44
